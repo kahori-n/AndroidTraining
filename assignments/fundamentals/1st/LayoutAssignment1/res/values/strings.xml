@@ -21,5 +21,6 @@
     <string name="times">×</string>
     <string name="divide">÷</string>
     <string name="dot">.</string>
+    <string name="default_number">0</string>
 
 </resources>
