@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <fragment
+            android:name="jp.mixi.practice.fragment.beg.MainFragment"
+            android:label="@string/title_activity_main_fragment"
+            android:parentActivityName="android.support.v4.app.FragmentActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="android.support.v4.app.FragmentActivity" />
+        </fragment>
     </application>
 
 </manifest>
