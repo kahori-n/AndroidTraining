@@ -38,29 +38,13 @@
             android:gravity="top"
             android:lines="5"
             android:inputType="textMultiLine"/>
-        <View
-            android:id="@+id/CenterDivider"
-            android:layout_width="1dp"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignBottom="@+id/Post"
-            android:layout_below="@+id/BodyInput"
-            android:background="#393939"/>
-        <Button
-            android:id="@+id/Post"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignRight="@+id/CenterDivider"
-            android:layout_below="@+id/BodyInput"
-            android:text="@string/PostLabel"/>
-        <Button
-            android:id="@+id/Discard"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignLeft="@+id/CenterDivider"
-            android:layout_below="@+id/BodyInput"
-            android:text="@string/DiscardLabel"/>
+	    <fragment
+	        android:id="@+id/fragment_main"
+	        android:name="jp.mixi.assignment.controller.adv.MainFragment"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+        	android:layout_below="@+id/BodyInput"
+	         />
+        
     </RelativeLayout>
 </ScrollView>

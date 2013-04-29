@@ -34,6 +34,11 @@ public class SubActivity extends Activity implements TextWatcher {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        
+        //インスタンスの復帰
+        String str = savedInstanceState.getString("EDITTEXT_KEY");
+        TextView synced_text = (TextView) findViewById(R.id.SyncedText);     
+        synced_text.setText(str);
     }
 
     /**
@@ -42,6 +47,10 @@ public class SubActivity extends Activity implements TextWatcher {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        
+        //インスタンスの保存
+        EditText text = (EditText) findViewById(R.id.Editor);     
+        outState.putString("EDITTEXT_KEY", text.getText().toString() );
     }
 
     @Override

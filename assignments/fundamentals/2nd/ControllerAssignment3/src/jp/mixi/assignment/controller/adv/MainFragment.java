@@ -1,4 +1,4 @@
-package jp.mixi.practice.fragment.beg;
+package jp.mixi.assignment.controller.adv;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

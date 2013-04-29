@@ -12,9 +12,9 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // FragmentManager ‚àAandroid.support.v4.app.FragmentManager ‚ğ—˜—p‚·‚é
+        // FragmentManager ã‚‚ã€android.support.v4.app.FragmentManager ã‚’åˆ©ç”¨ã™ã‚‹
         FragmentManager manager = getSupportFragmentManager();
-        // ƒŒƒCƒAƒEƒg‚©‚ç Fragment ‚ğŒ©‚Â‚¯o‚µ‚ÄƒCƒ“ƒXƒ^ƒ“ƒX‚ğ“¾‚é
+        // ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆã‹ã‚‰ Fragment ã‚’è¦‹ã¤ã‘å‡ºã—ã¦ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’å¾—ã‚‹
         Fragment fragment = manager.findFragmentById(R.id.fragment_main);
     }
 
