@@ -16,11 +16,6 @@
         <activity
             android:name="jp.mixi.assignment.controller.adv.MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <fragment
             android:name="jp.mixi.assignment.controller.adv.MainFragment"
@@ -30,6 +25,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.support.v4.app.FragmentActivity" />
         </fragment>
+        <activity
+            android:name="jp.mixi.assignment.controller.adv.OriginalActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
