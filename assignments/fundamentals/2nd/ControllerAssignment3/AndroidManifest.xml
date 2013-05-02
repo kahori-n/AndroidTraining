@@ -17,14 +17,6 @@
             android:name="jp.mixi.assignment.controller.adv.MainActivity"
             android:label="@string/app_name" >
         </activity>
-        <fragment
-            android:name="jp.mixi.assignment.controller.adv.MainFragment"
-            android:label="@string/app_name"
-            android:parentActivityName="android.support.v4.app.FragmentActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="android.support.v4.app.FragmentActivity" />
-        </fragment>
         <activity
             android:name="jp.mixi.assignment.controller.adv.OriginalActivity"
             android:label="@string/app_name" >
