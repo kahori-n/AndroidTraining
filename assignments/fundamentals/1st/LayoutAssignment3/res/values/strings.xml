@@ -13,5 +13,10 @@
     <string name="post_voice">つぶやきを投稿</string>
     <string name="menu">メニュー</string>
     <string name="notify_num">30</string>
+    <string name="image_button_call">電話をかけるショートカットのボタン</string>
+    <string name="image_button_send">メッセージを送るショートカットのボタン</string>
+    <string name="desc_setting_button">プロフィール設定ボタン</string>
+    <string name="image_button_share">シェアボタン</string>
+    <string name="desc_profile_image">自分のプロフィール画像</string>
 
 </resources>
