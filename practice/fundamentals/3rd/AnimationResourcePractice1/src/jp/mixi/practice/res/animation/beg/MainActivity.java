@@ -4,6 +4,9 @@ package jp.mixi.practice.res.animation.beg;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -11,6 +14,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+     // Animation Resource を読み込んで、Animation オブジェクトを得る
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.sample_animation);
+        // Animation オブジェクトを View に渡して、アニメーションを開始する
+        TextView textView = (TextView) findViewById(R.id.hello_world);
+        textView.startAnimation(animation);
+        
     }
 
     @Override

@@ -10,8 +10,39 @@
 
     <!-- TODO: つくった String リソースを利用した TextView を配置していく -->
     <TextView
+        android:id="@+id/good_morning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
+        android:text="@string/good_morning" />
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/good_morning"
+        android:text="@string/hello" />
+    <TextView
+        android:id="@+id/good_evening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hello"
+        android:text="@string/good_evening" />
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/good_evening"
+        android:text="@string/thanks" />
+    <TextView
+        android:id="@+id/and"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thanks"
+        android:text="@string/and" />
+    <TextView
+        android:id="@+id/skyhigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/and"
+        android:text="" />
+    
 </RelativeLayout>

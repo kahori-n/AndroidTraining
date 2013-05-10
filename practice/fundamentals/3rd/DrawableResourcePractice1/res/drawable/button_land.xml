@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- View が押された状態の Drawable -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_press_land"/>
+        </shape>
+    </item>
+    <!-- View がフォーカスされた状態の Drawable -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_focus_land"/>
+        </shape>
+    </item>
+    <!-- View が通常の状態の Drawable -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_normal_land"/>
+        </shape>
+    </item>
+</selector>

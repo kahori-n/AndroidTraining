@@ -24,7 +24,7 @@
         android:layout_alignLeft="@+id/imageView1"
         android:layout_below="@+id/imageView1"
         android:layout_marginTop="36dp"
-        android:background="@drawable/button"
+        android:background="@drawable/button_land"
         android:text="Button" />
 
 </RelativeLayout>

@@ -7,5 +7,8 @@
     <plurals name="my_apple">
         <item quantity="other">私は、%1$d 個のりんごを持っています。</item>
     </plurals>
-
+    <plurals name="my_apples">
+        <item quantity="one">I have one apple.</item>
+        <item quantity="other">I have %d apples.</item>
+    </plurals>
 </resources>

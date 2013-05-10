@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="oval_color">#ffff00</color>
+    <color name="button_normal">#F5DEB3</color>
+    <color name="button_press">#A0522D</color>
+    <color name="button_focus">#F4A460</color>
+    <color name="button_normal_land">#ADD8E6</color>
+    <color name="button_press_land">#191970</color>
+    <color name="button_focus_land">#4169E1</color>
+</resources>
