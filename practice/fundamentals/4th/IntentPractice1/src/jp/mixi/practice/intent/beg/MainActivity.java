@@ -2,6 +2,7 @@
 package jp.mixi.practice.intent.beg;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -19,7 +20,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO ここに、NewActivity1 を呼び出す処理を書く
-                
+                Intent intent = new Intent(MainActivity.this, NewActivity1.class);
+                startActivity(intent);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -27,6 +29,9 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO ここに、NewActivity2 を呼び出す処理を書く
                 // TODO NewActivity2 は、toast_message をキーとした Extra のデータを必要としているので、適宜 Intent に含めること
+                Intent intent = new Intent(MainActivity.this, NewActivity2.class);
+                intent.putExtra("toast_message", "toastに表示したい!!");
+                startActivity(intent);
                 
             }
         });
@@ -35,7 +40,9 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO ここに、NewActivity3 を呼び出す処理を書く
                 // TODO Intent に、Intent.FLAG_ACTIVITY_NO_HISTORY という flag をセットするとどうなるかレポートすること
-                
+                Intent intent = new Intent(MainActivity.this, NewActivity3.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
             }
         });
     }
