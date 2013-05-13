@@ -2,13 +2,16 @@
 package jp.mixi.assignment.listview.beg;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.AdapterView.AdapterContextMenuInfo;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,7 +19,6 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
 
     private Activity mActivity;
-
     private ListView mListView;
 
     @Override
@@ -34,13 +36,25 @@ public class MainActivity extends Activity {
 
         // TODO:BookArrayAdapterを作成して下さい。
         // (リストアイテムのレイアウトは用意されているlist_item_book.xmlをしてください。)
-        // BookArrayAdapter bookArrayAdapter = new BookArrayAdapter(mActivity,
-        // list);
+        BookArrayAdapter bookArrayAdapter = new BookArrayAdapter(mActivity, list);
         mListView = (ListView) findViewById(R.id.BookList);
 
         // TODO:ListViewにBookArrayAdapterをセットしてください。
         // TODO:ListViewをタップしたとき、BookActivityに遷移するようにしてください。遷移するときにBookクラスのtitleを渡してください。
         // (BookActivityは用意されているものを使用してください)
+        
+        mListView.setAdapter(bookArrayAdapter);
+        // タップした時の動作を定義する
+        mListView.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Adapterからタップした位置のデータを取得する
+                Book book = (Book) parent.getItemAtPosition(position);
+                Intent intent = new Intent(mActivity, BookActivity.class);
+                intent.putExtra("title", book.getTitle());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -80,14 +94,17 @@ public class MainActivity extends Activity {
         // ListViewから長押しされたリストアイテムを取得します
         Book book = (Book) mListView.getItemAtPosition(position);
         // ListViewからセットされているAdapterを取得します
-        // BookArrayAdapter adapter = (BookArrayAdapter) mListView.getAdapter();
+        BookArrayAdapter adapter = (BookArrayAdapter) mListView.getAdapter();
 
         if (item.getItemId() == R.id.DeleteListItem) {
             // TODO:Adapterを使用して長押ししたデータを削除してください
+        	adapter.remove(book);
         } else if (item.getItemId() == R.id.AddListItem) {
             // TODO:Adapterを使用して長押ししたデータを追加してください
+        	adapter.add(book);
         }
         // TODO:Adapterを使用して表示されているデータを更新してください
+        adapter.notifyDataSetChanged();
         
         return true;
     }
